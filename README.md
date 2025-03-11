@@ -48,48 +48,38 @@ MidasTouch performs online global localization of a vision-based touch sensor on
 ## Setup
 
 ### 1. Clone repository
-
 ```bash
 git clone git@github.com:facebookresearch/MidasTouch.git
 git submodule update --init --recursive
 ```
-### 2. Download  <a href="https://github.com/rpl-cmu/YCB-Slide">YCB-Slide</a> dataset
+### 2. Download dataset & weights
+
+### 3. Folder structure
 ```bash
-cd YCB-Slide 
-chmod +x download_dataset.sh && ./download_dataset.sh # requires gdown
-cd ..
+SwishFormer
+├── data                                  # Folder contains palpation recording
+    ├── Avocado_01                            # Palpation recording
+    ├── Dataset.xlsx                          # Excel dataset consist of firmness values and ripness stages
+├── features                              # Consist concatenated features csv files form ablated SwishFormer model for each fold 
+    ├──All_kfolds_feat_all_data.csv           
+├── folds_info                            # CSV 
+    ├── Fold_1_train.csv                      # b
+├── inference                             # b
+    ├── 3 Digit images                        # b
+├── weights                               # b
+    ├── Exp_001_Fold1                         # b
+    ├── random_forest_K_fold_1.joblib         # b
+├── .py files                             # b
+
 ```
-### 3. Download weights/codebooks
+### 4. Setup SwishFormer conda env
 ```bash
-chmod +x download_assets.sh && ./download_assets.sh
-```
-### 4. Setup midastouch conda env
-```bash
-sudo apt install build-essential python3-dev libopenblas-dev
-conda create -n midastouch
-conda activate midastouch
-conda env update --file environment.yml --prune
-conda install pytorch torchvision torchaudio cudatoolkit pytorch-cuda=11.7 -c pytorch -c nvidia  # install torch
-conda install -c conda-forge cudatoolkit-dev
-pip install theseus-ai
-pip install -e .
+cd SwishFormer
+conda env create -f environment.yml
+conda activate SwishFormer
 ```
 
-
-#### Known issues
-```ImportError: cannot import name 'gcd' from 'fractions' (/private/home/suddhu/.conda/envs/midastouch/lib/python3.9/fractions.py)```
-
-```bash
-conda install -c conda-forge networkx=2.5
-```
-### 5. Install PyTorch and the MinkowskiEngine
-
-&nbsp; &nbsp; &nbsp; Follow [the conda instructions](https://github.com/NVIDIA/MinkowskiEngine#anaconda) from the NVIDIA MinkowskiEngine webpage 
-
-
-
-## Run MidasTouch
-
+### 5. Train SwishFormer
 Run interactive filtering experiments with our YCB-Slide data from both the simulated and real-world tactile interactions. 
 
 <div align="center">
@@ -97,69 +87,15 @@ Run interactive filtering experiments with our YCB-Slide data from both the simu
   width="60%">
 </div>
 
+### 6. Inference SwishFormer
+Run interactive filtering experiments with our YCB-Slide data from both the simulated and real-world tactile interactions. 
 
-### TACTO simulation trajectories
-```python
-python midastouch/filter/filter.py expt=ycb # default: 004_sugar_box log 0
-python midastouch/filter/filter.py expt.obj_model=035_power_drill expt.log_id=3 # 035_power_drill log 3
-python midastouch/filter/filter.py expt.off_screen=True   # disable visualization
-python midastouch/filter/filter.py expt=mcmaster   # small parts: cotter-pin log 0
-```
-
-### Real-world trajectories
-
-```python
-python midastouch/filter/filter_real.py expt=ycb # default: 004_sugar_box log 0
-python midastouch/filter/filter_real.py expt.obj_model=021_bleach_cleanser expt.log_id=2 # 021_bleach_cleanser log 2
-```
-
-
-
-## Codebook live demo
-
-With your own [DIGIT](https://digit.ml/), you can simple plug in the sensor and experiment with the image to 3D and tactile codes visualizer. 
-
-
-```python
-python midastouch/filter/live_demo.py expt.obj_model=025_mug
-```
-
-<div align="center">
-  <img src=".github/live_demo_mug.gif"
-  width="60%">
-</div>
-
-
-
-## Folder structure
-```bash
-midastouch
-├── bash          # bash scripts for filtering, codebook generation
-├── config        # hydra config files 
-├── contrib       # modified third-party code for TDN, TCN
-├── data_gen      # Generate tactile simulation data for training/eval
-├── eval          # select evaluation scripts 
-├── filter        # filtering and live demo scripts
-├── modules       # helper functions and classes
-├── render        # DIGIT tactile rendering class
-├── tactile_tree  # codebook scripts 
-└── viz           # pyvista visualization 
-```
-
-## Data generation scripts
-
-- To generate your own tactile simulation data on object meshes, refer to the `midastouch/data_gen/` scripts. 
-- To collect tactile data in the real-world, refer to our experimental scripts in the [YCB-Slide repository](https://github.com/rpl-cmu/YCB-Slide). 
-
-<div align="center">
-  <img src=".github/power_drill_ycb_slide.png"
-  width="35%"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <img src=".github/power_drill_train_data.png"
-  width="35%">
-</div>
+<video id="teaser" autoplay muted loop playsinline height="100%">
+  <source src="./website/videos/Project.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
 
 ## Bibtex
-
 ```
 @inproceedings{suresh2022midastouch,
     title={{M}idas{T}ouch: {M}onte-{C}arlo inference over distributions across sliding touch},
@@ -171,13 +107,6 @@ midastouch
 }
 ```
 
-
-## License
+## Acknowledgements
 
 The majority of MidasTouch is licensed under MIT license, however portions of the project are available under separate license terms: MinkLoc3D is licensed under the MIT license; FCRN-DepthPrediction is licensed under the BSD 2-clause license; pytorch3d is licensed under the BSD 3-clause license. Please see the [LICENSE](LICENSE) file for more information.
-
-
-
-## Contributing
-
-We actively welcome your pull requests! Please see [CONTRIBUTING.md](.github/CONTRIBUTING.md) and [CODE_OF_CONDUCT.md](.github/CODE_OF_CONDUCT.md) for more info.
