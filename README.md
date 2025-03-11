@@ -23,7 +23,7 @@
 <h4 align="center">
   <a href="https://mashood3624.github.io/SwishFormer/"><b>Website</b></a> &nbsp;•&nbsp;
   <a href=""><b>Paper</b></a> &nbsp;•&nbsp; 
-  <a href=""><b>Dataset</b></a> &nbsp;•&nbsp; 
+  <a href="https://kuacae-my.sharepoint.com/:u:/g/personal/mashood_mohsan_ku_ac_ae/EUY1BMvole1MtbwqDExjeY4BZDVbqGdIj-wqzuIuNmoXGQ?e=9cMVwK"><b>Dataset</b></a> &nbsp;•&nbsp; 
   <a href=""><b>Video</b></a>
 </h4>
 
@@ -36,9 +36,10 @@
 [cc-by-sa-shield]: https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg
 
 
-MidasTouch performs online global localization of a vision-based touch sensor on an object surface during sliding interactions.  For details and further results, refer to our <a href="https://suddhu.github.io/midastouch-tactile/">website</a> and <a href="https://openreview.net/forum?id=JWROnOf4w-K">paper</a>.
+
 
 <div align="center">
+    SwishFormer uses tactile images when a robot palpates a fruit to predict frimness and ripeness.
   <img src="./website/images/overall.png"
   width="80%">
 </div>
@@ -49,11 +50,10 @@ MidasTouch performs online global localization of a vision-based touch sensor on
 
 ### 1. Clone repository
 ```bash
-git clone git@github.com:facebookresearch/MidasTouch.git
-git submodule update --init --recursive
+git clone git@github.com:Mashood3624/SwishFormer.git
 ```
 ### 2. Download dataset & weights
-
+Please download the dataset and weights by clicking <a href="https://kuacae-my.sharepoint.com/:u:/g/personal/mashood_mohsan_ku_ac_ae/EUY1BMvole1MtbwqDExjeY4BZDVbqGdIj-wqzuIuNmoXGQ?e=9cMVwK"><b>here</b></a>.
 ### 3. Folder structure
 ```bash
 SwishFormer
@@ -80,13 +80,20 @@ conda activate SwishFormer
 ```
 
 ### 5. Train SwishFormer
-Run interactive filtering experiments with our YCB-Slide data from both the simulated and real-world tactile interactions. 
+Three steps to train from scratch: Train ablated SwishFormer, Extract concatenated features, & Train Random Forest regressor. 
+```bash
+python base.py
+python features.py
+python random_forest.py
 
-
+```
 
 ### 6. Inference SwishFormer
-Run interactive filtering experiments with our YCB-Slide data from both the simulated and real-world tactile interactions. 
+Place any three 3 consecutive DIGIT images in inference folder and run the following.
+```bash
+python inference.py
 
+```
 
 <div align="Center">
     <h3>Fruit Sorting using SwishFormer </h3>
@@ -98,13 +105,11 @@ Run interactive filtering experiments with our YCB-Slide data from both the simu
 
 ## Bibtex
 ```
-@inproceedings{suresh2022midastouch,
-    title={{M}idas{T}ouch: {M}onte-{C}arlo inference over distributions across sliding touch},
-    author={Suresh, Sudharshan and Si, Zilin and Anderson, Stuart and Kaess, Michael and Mukadam, Mustafa},
-    booktitle = {Proc. Conf. on Robot Learning, CoRL},
-    address = {Auckland, NZ},
-    month = dec,
-    year = {2022}
+@article{mohsan2025swishformer,
+  author    = {Mohsan, Mashood M. and Hasanen, Basma B. and Hassan, Taimur and Din, Muhayy Ud and Werghi, Naoufel and Seneviratne, Lakmal and Hussain, Irfan},
+  title     = {SwishFormer for Robust Firmness and Ripeness Recognition of Fruits using Visual Tactile Imagery},
+  journal   = {postharvest biology and technology},
+  year      = {2025},
 }
 ```
 
