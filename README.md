@@ -82,18 +82,17 @@ conda activate SwishFormer
 ### 5. Train SwishFormer
 Run interactive filtering experiments with our YCB-Slide data from both the simulated and real-world tactile interactions. 
 
-<div align="center">
-  <img src=".github/interactive_filter.gif"
-  width="60%">
-</div>
+
 
 ### 6. Inference SwishFormer
 Run interactive filtering experiments with our YCB-Slide data from both the simulated and real-world tactile interactions. 
 
-<video id="teaser" autoplay muted loop playsinline height="100%">
-  <source src="./website/videos/Project.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
+<div align="left">
+  <img src="./website/videos/fruit_sorting.gif"
+  width="80%">
+    
+</div>
+
 
 ## Bibtex
 ```
