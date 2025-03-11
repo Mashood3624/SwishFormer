@@ -62,14 +62,14 @@ SwishFormer
     ├── Dataset.xlsx                          # Excel dataset consist of firmness values and ripness stages
 ├── features                              # Consist concatenated features csv files form ablated SwishFormer model for each fold 
     ├──All_kfolds_feat_all_data.csv           
-├── folds_info                            # CSV 
-    ├── Fold_1_train.csv                      # b
-├── inference                             # b
-    ├── 3 Digit images                        # b
-├── weights                               # b
-    ├── Exp_001_Fold1                         # b
-    ├── random_forest_K_fold_1.joblib         # b
-├── .py files                             # b
+├── folds_info                            # CSV files containing list of samples used in each fold (total 5 folds)
+    ├── Fold_1_train.csv                     
+├── inference                             # Random images to perform inference
+    ├── 3 Digit images                     
+├── weights                               # Consist weights of ablated Swishfromer & Random Forest regressor trained on each fold seperately
+    ├── Exp_001_Fold1                        
+    ├── random_forest_K_fold_1.joblib        
+├── .py files                             # Rest of the files in this repo
 
 ```
 ### 4. Setup SwishFormer conda env
@@ -87,7 +87,9 @@ Run interactive filtering experiments with our YCB-Slide data from both the simu
 ### 6. Inference SwishFormer
 Run interactive filtering experiments with our YCB-Slide data from both the simulated and real-world tactile interactions. 
 
-<div align="left">
+
+<div align="Center">
+    <h3>Fruit Sorting using SwishFormer </h3>
   <img src="./website/videos/fruit_sorting.gif"
   width="80%">
     
