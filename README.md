@@ -28,11 +28,8 @@
 </h4>
 
 <div align="center">
-<b>TL;DR</b>: We track the pose distribution of a robot finger on an <br>
-object's surface using geometry captured by a tactile sensor
-<br> <br>
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) &nbsp;&nbsp;&nbsp;&nbsp; <img height="40" src="./website/images//Khalifa_logo.png" alt="Meta-AI" />  &nbsp;&nbsp; <img height="40" src="./website/images//KUCARS.jpg" alt="rpl" />
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) &nbsp;&nbsp;&nbsp;&nbsp; <img height="40" src="./website/images/Khalifa_logo.png" alt="Meta-AI" />  &nbsp;&nbsp; <img height="40" src="./website/images//KUCARS.jpg" alt="rpl" />
 </div>
 
 [cc-by-sa]: http://creativecommons.org/licenses/by-sa/4.0/
@@ -42,7 +39,7 @@ object's surface using geometry captured by a tactile sensor
 MidasTouch performs online global localization of a vision-based touch sensor on an object surface during sliding interactions.  For details and further results, refer to our <a href="https://suddhu.github.io/midastouch-tactile/">website</a> and <a href="https://openreview.net/forum?id=JWROnOf4w-K">paper</a>.
 
 <div align="center">
-  <img src=".github/021_bleach_cleanser.gif"
+  <img src="./website/images/overall.png"
   width="80%">
 </div>
 
