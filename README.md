@@ -22,7 +22,7 @@
 
 <h4 align="center">
   <a href="https://mashood3624.github.io/SwishFormer/"><b>Website</b></a> &nbsp;•&nbsp;
-  <a href=""><b>Paper</b></a> &nbsp;•&nbsp; 
+  <a href="https://www.sciencedirect.com/science/article/pii/S0925521425000997"><b>Paper</b></a> &nbsp;•&nbsp; 
   <a href="https://kuacae-my.sharepoint.com/:u:/g/personal/mashood_mohsan_ku_ac_ae/EUY1BMvole1MtbwqDExjeY4BZDVbqGdIj-wqzuIuNmoXGQ?e=9cMVwK"><b>Dataset</b></a> &nbsp;•&nbsp; 
   <a href=""><b>Video</b></a>
 </h4>
@@ -106,11 +106,14 @@ python inference.py
 ## Bibtex
 ```
 @article{mohsan2025swishformer,
-  author    = {Mohsan, Mashood M. and Hasanen, Basma B. and Hassan, Taimur and Din, Muhayy Ud and Werghi, Naoufel and Seneviratne, Lakmal and Hussain, Irfan},
-  title     = {SwishFormer for Robust Firmness and Ripeness Recognition of Fruits using Visual Tactile Imagery},
-  journal   = {postharvest biology and technology},
-  year      = {2025},
-}
+      title={SwishFormer for robust firmness and ripeness recognition of fruits using visual tactile imagery},
+      author={Mohsan, Mashood M and Hasanen, Basma B and Hassan, Taimur and Din, Muhayy Ud and Werghi, Naoufel and Seneviratne, Lakmal and Hussain, Irfan},
+      journal={Postharvest Biology and Technology},
+      volume={225},
+      pages={113487},
+      year={2025},
+      publisher={Elsevier}
+    }
 ```
 
 ## Acknowledgements
