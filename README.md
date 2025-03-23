@@ -24,7 +24,7 @@
   <a href="https://mashood3624.github.io/SwishFormer/"><b>Website</b></a> &nbsp;•&nbsp;
   <a href="https://www.sciencedirect.com/science/article/pii/S0925521425000997"><b>Paper</b></a> &nbsp;•&nbsp; 
   <a href="https://kuacae-my.sharepoint.com/:u:/g/personal/mashood_mohsan_ku_ac_ae/EUY1BMvole1MtbwqDExjeY4BZDVbqGdIj-wqzuIuNmoXGQ?e=9cMVwK"><b>Dataset</b></a> &nbsp;•&nbsp; 
-  <a href=""><b>Video</b></a>
+  <a href="https://www.youtube.com/watch?v=rfSmYwNcWEg"><b>Video</b></a>
 </h4>
 
 <div align="center">
