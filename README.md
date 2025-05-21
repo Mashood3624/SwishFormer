@@ -53,7 +53,9 @@
 git clone git@github.com:Mashood3624/SwishFormer.git
 ```
 ### 2. Download dataset & weights
-Please download the dataset and weights by clicking <a href="https://kuacae-my.sharepoint.com/:u:/g/personal/mashood_mohsan_ku_ac_ae/EUY1BMvole1MtbwqDExjeY4BZDVbqGdIj-wqzuIuNmoXGQ?e=9cMVwK"><b>here</b></a>.
+Please download the dataset and weights by clicking <a href="https://1drv.ms/u/s!ApqqDy-MtRnr7ZNqhgBw2g6snSRObA?e=B8JfiM"><b>here</b></a>. Please reach out at <a href="https://www.linkedin.com/in/mashood3624/"><b>LinkedIn</b></a> in case of any issues.
+
+https://www.linkedin.com/in/mashood3624/
 ### 3. Folder structure
 ```bash
 SwishFormer
